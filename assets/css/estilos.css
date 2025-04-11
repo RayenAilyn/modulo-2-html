@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+/*reset de css a html*/
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    height: 100%;
+}
+
+html body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    min-height: 100%;
+}
+.contenedor >* {
+    box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    padding: 50px;
+    border-radius: 8px;
+    border-color: aqua;
+}
+.header {
+    grid-area: header;
+    background-color: rgba(0, 255, 255, 0.464);
+}
+.nav {
+    grid-area: header;
+    background-color: rgba(238, 0, 255, 0.601);
+}
+.aside {
+    grid-area: header;
+    background-color: rgba(255, 187, 0, 0.751);
+}
+.article {
+    grid-area: header;
+    background-color: rgba(221, 255, 0, 0.827);
+}
+.footer {
+    grid-area: header;
+    background-color: rgba(0, 13, 255, 0.926);
+}
+.contenedor {
+    display: grid;
+    gap: 10px;
+    grid-template:
+       "header" 100px
+       "nav" 100px
+       "article" auto
+       "aside" 100px
+       "footer" 100px;
+}
+@media (min-width:600px) {
+.contenedor {
+    grid-template:
+    "header header" 100px
+    "nav nav" 100px
+    "aside article"auto
+    "footer footer" 100px;
+    }
+}
